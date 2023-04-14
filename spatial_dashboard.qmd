@@ -36,6 +36,8 @@ hennepin.base.map <- get_map(location = hennepin.box,
                              maptype = "watercolor",
                              crop = TRUE)
 
+census_api_key("CENSUS_API_KEY")
+
 mn_age_df <- get_acs(
   geography = "tract",
   variables = "B01002_001E", #Code for MEDIAN AGE BYB SEX
