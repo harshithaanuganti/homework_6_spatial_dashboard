@@ -36,7 +36,9 @@ hennepin.base.map <- get_map(location = hennepin.box,
                              maptype = "watercolor",
                              crop = TRUE)
 
-census_api_key("CENSUS_API_KEY")
+census_api_key("CENSUS_API_KEY", 
+               overwrite = TRUE,
+               install = TRUE)
 
 mn_age_df <- get_acs(
   geography = "tract",
